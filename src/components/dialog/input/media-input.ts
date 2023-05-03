@@ -1,10 +1,6 @@
-import { BaseComponent } from "../../component";
-import { MediaData } from "../dialog";
-
-export class MediaSectionInput
-  extends BaseComponent<HTMLElement>
-  implements MediaData
-{
+import { MediaData } from './../dialog.js';
+import { BaseComponent } from './../../component.js';
+export class MediaSectionInput extends BaseComponent<HTMLElement> implements MediaData {
   constructor() {
     super(`<div>
             <div class="form__container">
@@ -19,11 +15,11 @@ export class MediaSectionInput
   }
 
   get title(): string {
-    const element = this.element.querySelector("#title")! as HTMLInputElement;
+    const element = this.element.querySelector('#title')! as HTMLInputElement;
     return element.value;
   }
   get url(): string {
-    const element = this.element.querySelector("#url")! as HTMLInputElement;
+    const element = this.element.querySelector('#url')! as HTMLInputElement;
     return element.value;
   }
 }
